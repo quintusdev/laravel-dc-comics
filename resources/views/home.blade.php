@@ -4,7 +4,7 @@
     <div class="bg-black">
         <div class="container">
             <div class="row py-5 position">
-                @foreach ($comics as $id => $comic)
+                @foreach ($dc_comics as $id => $comic)
                     <div class="col-2 py-3">
                         <a href="{{ route('comics.show', $id) }}">
                             <div class="card bg-black">
