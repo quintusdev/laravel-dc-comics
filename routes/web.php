@@ -1,6 +1,7 @@
 <?php
+/* Importo il percorso del controller da utilizzare */
 
-use App\Models\Comic;
+use App\Http\Controllers\ComicController;
 use Illuminate\Support\Facades\Route;
 
 /*
