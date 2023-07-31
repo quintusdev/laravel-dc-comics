@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\dcComic;
+use App\Models\Comic;
 use Illuminate\Http\Request;
 
-class DcComicController extends Controller
+class ComicController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class DcComicController extends Controller
      */
     public function index()
     {
-        //
+        $comic = Comic::all();
+        return view('comic.index', compact('comic'));
     }
 
     /**
@@ -44,7 +45,7 @@ class DcComicController extends Controller
      * @param  \App\Models\dcComic  $dcComic
      * @return \Illuminate\Http\Response
      */
-    public function show(dcComic $dcComic)
+    public function show(Comic $dcComic)
     {
         //
     }
@@ -55,7 +56,7 @@ class DcComicController extends Controller
      * @param  \App\Models\dcComic  $dcComic
      * @return \Illuminate\Http\Response
      */
-    public function edit(dcComic $dcComic)
+    public function edit(Comic $dcComic)
     {
         //
     }
@@ -64,10 +65,10 @@ class DcComicController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\dcComic  $dcComic
+     * @param  \App\Models\Comic  $Comic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, dcComic $dcComic)
+    public function update(Request $request, Comic $dcComic)
     {
         //
     }
@@ -78,7 +79,7 @@ class DcComicController extends Controller
      * @param  \App\Models\dcComic  $dcComic
      * @return \Illuminate\Http\Response
      */
-    public function destroy(dcComic $dcComic)
+    public function destroy(Comic $dcComic)
     {
         //
     }
