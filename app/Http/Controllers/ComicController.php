@@ -14,8 +14,8 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $comic = Comic::all();
-        return view('comic.home', compact('comic'));
+        $comics = Comic::all();
+        return view('comics.index', compact('comics'));
     }
 
     /**
@@ -25,7 +25,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('comics.create');
     }
 
     /**
@@ -36,27 +36,46 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $form_data = $request->all();
+
+        $comic = new Comic();
+
+        $comic->title = $form_data['title'];
+        $comic->description = $form_data['description'];
+        $comic->thumb = $form_data['thumb'];
+        $comic->cover_image = $form_data['cover_image'];
+        $comic->thumb2 = $form_data['thumb2'];
+        $comic->price = $form_data['price'];
+        $comic->series = $form_data['series'];
+        $comic->sale_date = $form_data['sale_date'];
+        $comic->type = $form_data['type'];
+        $comic->artists = $form_data['artists'];
+        $comic->writers = $form_data['writers'];
+
+        $comic->save();
+
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\dcComic  $dcComic
+     * @param  \App\Models\Comic  $Comic
      * @return \Illuminate\Http\Response
      */
-    public function show(Comic $dcComic)
+    public function show($id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+        return view('comics.show', compact('comic'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\dcComic  $dcComic
+     * @param  \App\Models\Comic  $Comic
      * @return \Illuminate\Http\Response
      */
-    public function edit(Comic $dcComic)
+    public function edit(Comic $Comic)
     {
         //
     }
@@ -68,7 +87,7 @@ class ComicController extends Controller
      * @param  \App\Models\Comic  $Comic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comic $dcComic)
+    public function update(Request $request, Comic $Comic)
     {
         //
     }
@@ -79,7 +98,7 @@ class ComicController extends Controller
      * @param  \App\Models\dcComic  $dcComic
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comic $dcComic)
+    public function destroy(Comic $Comic)
     {
         //
     }
