@@ -82,9 +82,15 @@
                 <button class="btn btn-sm btn-warning fw-bold text-white mx-3">
                     <a href="{{ route('comics.edit', $comic->id) }}">Modifica</a>
                 </button>
-                <button class="btn btn-sm btn-danger fw-bold text-white mx-3">
-                    <a href="{{ route('comics.destroy', $comic->id) }}">Elimina</a>
-                </button>
+                {{-- Delete Button --}}
+                <form action="{{ route('comics.destroy', $comic) }}" method="POST"
+                    onsubmit="return confirm('Sei sicuro di voler cancellare questo elemento?')" class="d-inline-block">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger mx-2">
+                        Elimina Elemento
+                    </button>
+                </form>
             </div>
         </div>
     @endsection
