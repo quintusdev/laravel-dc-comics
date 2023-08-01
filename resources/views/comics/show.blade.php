@@ -76,8 +76,14 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center">
-                <button class="btn btn-sm btn-warning warning-underline fw-bold text-black">
+                <button class="btn btn-sm btn-success fw-bold text-white mx-3">
+                    <a class="unstyled" href="{{ route('comics.index', $comic->id) }}">Torna alla Home</a>
+                </button>
+                <button class="btn btn-sm btn-warning fw-bold text-white mx-3">
                     <a href="{{ route('comics.edit', $comic->id) }}">Modifica</a>
+                </button>
+                <button class="btn btn-sm btn-danger fw-bold text-white mx-3">
+                    <a href="{{ route('comics.destroy', $comic->id) }}">Elimina</a>
                 </button>
             </div>
         </div>
