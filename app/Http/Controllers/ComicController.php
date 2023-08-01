@@ -77,7 +77,8 @@ class ComicController extends Controller
      */
     public function edit(Comic $Comic)
     {
-        //
+        /* Collego il file EDIT */
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -87,9 +88,16 @@ class ComicController extends Controller
      * @param  \App\Models\Comic  $Comic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comic $Comic)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        /* Prendo i dati del form e li inserisco nella variabile */
+        $form_data = $request->all();
+
+        /* Aggiorno i dati modificati con UPDATE e li inserisco in COMIC  */
+        $comic->update($form_data);
+
+        /* vengo reindirizzato alla pagine SHOW */
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**

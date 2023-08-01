@@ -75,5 +75,10 @@
                     </div>
                 </div>
             </div>
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-sm btn-success success-underline fw-bold text-black">
+                    <a href="{{ route('comics.edit', $comic->$id) }}">Modifica</a>
+                </button>
+            </div>
         </div>
     @endsection
