@@ -15,4 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* Route che si collega alla home attraverso la classe del controller */
+
 Route::resource('/', ComicController::class);
+/* Route che si collega alla cartella comics attraverso la classe del controller */
+
+Route::resource('comics', ComicController::class);
