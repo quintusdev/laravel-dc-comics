@@ -33,7 +33,7 @@
                 <h4>Talent</h4>
                 <div class="row pt-3">
                     <div class="col-4">
-                        <span>Art by:</span>
+                        <span>Artista:</span>
                     </div>
                     <div class="col-8 px-5 text-primary">
                         <span>{{ $comic->artists }},</span>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="row pt-3">
                     <div class="col-4">
-                        <span>Written by:</span>
+                        <span>Scritto da:</span>
                     </div>
                     <div class="col-8 px-5 text-primary">
                         <span>{{ $comic->writers }},</span>
@@ -60,7 +60,7 @@
                 </div>
                 <div class="row pt-3">
                     <div class="col-4">
-                        <span>U.S. Price:</span>
+                        <span>Prezzo:</span>
                     </div>
                     <div class="col-8 px-5 text-primary text-uppercase">
                         <span>{{ $comic->price }}</span>
@@ -68,7 +68,7 @@
                 </div>
                 <div class="row pt-3">
                     <div class="col-4">
-                        <span>On Sale Date:</span>
+                        <span>Data Pubblicazione:</span>
                     </div>
                     <div class="col-8 px-5 text-primary text-uppercase">
                         <span>{{ $comic->sale_date }}</span>
