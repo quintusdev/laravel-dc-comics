@@ -87,9 +87,7 @@
                     onsubmit="return confirm('Sei sicuro di voler cancellare questo elemento?')" class="d-inline-block">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger mx-2">
-                        Elimina Elemento
-                    </button>
+                    <button type="submit" class="btn btn-danger mx-2">Elimina Elemento</button>
                 </form>
             </div>
         </div>
