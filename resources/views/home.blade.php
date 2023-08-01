@@ -14,7 +14,7 @@
                         </a>
                     </div>
                 @endforeach
-                <div class="d-flex justify-content-center ">
+                <div class="d-flex justify-content-center">
                     <button class="btn btn-sm btn-warning warning-underline fw-bold text-black">
                         <a href="{{ route('comics.create', $comic->$id) }}">Nuovo Fumetto</a>
                     </button>

@@ -53,7 +53,7 @@ class ComicController extends Controller
         $comic->writers = $form_data['writers'];
 
         $comic->save();
-
+        /* Una volta salvato i dati mi riporta alla pagina .show */
         return redirect()->route('comics.show', $comic->id);
     }
 
