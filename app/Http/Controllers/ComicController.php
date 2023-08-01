@@ -63,9 +63,8 @@ class ComicController extends Controller
      * @param  \App\Models\Comic  $Comic
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comic $comic)
     {
-        $comic = Comic::findOrFail($id);
         return view('comics.show', compact('comic'));
     }
 
@@ -75,7 +74,7 @@ class ComicController extends Controller
      * @param  \App\Models\Comic  $Comic
      * @return \Illuminate\Http\Response
      */
-    public function edit(Comic $Comic)
+    public function edit(Comic $comic)
     {
         /* Collego il file EDIT */
         return view('comics.edit', compact('comic'));
@@ -97,7 +96,7 @@ class ComicController extends Controller
         $comic->update($form_data);
 
         /* vengo reindirizzato alla pagine SHOW */
-        return redirect()->route('comics.show', $comic->id);
+        return redirect()->route('comics.show', compact('comic'));
     }
 
     /**

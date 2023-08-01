@@ -18,17 +18,17 @@
                             <div class="card-body">
                                 <!-- Series -->
                                 <div>
-                                    <strong>Series:</strong>
+                                    <strong>Serie:</strong>
                                     <span>{{ $comic->series }}</span>
                                 </div>
                                 <!-- Type -->
                                 <div>
-                                    <strong>Type:</strong>
+                                    <strong>Tipologia:</strong>
                                     <span>{{ $comic->type }}</span>
                                 </div>
                                 <!-- Price -->
                                 <div>
-                                    <strong>Price:</strong>
+                                    <strong>Prezzo:</strong>
                                     <span>{{ $comic->price }}</span>
                                 </div>
                                 <!-- Sale Date -->
@@ -38,7 +38,7 @@
                                 </div>
                                 <!-- More Info Button -->
                                 <div>
-                                    <a href="{{ Route('comics.show', $comic->id) }}" class="btn btn-primary">More Info</a>
+                                    <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary">More Info</a>
                                 </div>
                             </div>
                         </div>

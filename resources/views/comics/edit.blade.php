@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <form action=" {{ route('comics.update', $comic->$id) }} " method="POST" enctype="multipart/form-data">
+                <form action=" {{ route('comics.update', $comic->id) }} " method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="form-group border p-4">
