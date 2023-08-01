@@ -18,20 +18,20 @@
                                 <textarea name="description" id="description" placeholder="Inserisci la descrizione" cols="30" rows="10"
                                     class="form-control" required></textarea>
                             </div>
-                            <div class="col-12 my-3">
+                            <div class="col-12 my-3 mt-3">
                                 <label class="control-label my-3">Immagine</label>
                                 <input type="url" name="thumb" id="thumb" placeholder="Inserisci la thumb"
-                                    class="form-control" required>
+                                    class="form-control">
                             </div>
                             <div class="col-12 my-3">
                                 <label class="control-label my-3">Cover Immagine</label>
                                 <input type="text" name="cover_image" id="cover_image"
-                                    placeholder="Inserisci la cover image" class="form-control" required>
+                                    placeholder="Inserisci la cover image" class="form-control">
                             </div>
                             <div class="col-12 my-3">
                                 <label class="control-label my-3">Immagine 2</label>
                                 <input type="url" name="thumb2" id="thumb2" placeholder="Inserisci la thumb 2"
-                                    class="form-control" required>
+                                    class="form-control">
                             </div>
                             <div class="col-12 my-3">
                                 <label class="control-label my-3">Prezzo</label>

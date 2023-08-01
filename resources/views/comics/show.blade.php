@@ -12,9 +12,11 @@
                     <div class="d-flex justify-content-center">
                         <div class="col-7 me-5">
                             <h2>{{ $comic->title }}</h2>
-                            <div class="button-green d-flex justify-content-between align-items-center my-3"><span
-                                    class="ps-3">U.S. Price: $19.99</span> <span>AVAILABLE</span> <span
-                                    class="pe-3">Check Availability</span></div>
+                            <div class="button-green d-flex justify-content-between align-items-center my-3">
+                                <p class="ps-3">Prezzo: {{ $comic->price }} €</p>
+                                <p class="bg-success">AVAILABLE</p>
+                                <p class="pe-3">Check Availability</p>
+                            </div>
                             <p>{{ $comic->description }}</p>
                         </div>
                         <div class="col-2">
