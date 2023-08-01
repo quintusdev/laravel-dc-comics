@@ -14,8 +14,10 @@
                         </a>
                     </div>
                 @endforeach
-                <div class="d-flex justify-content-center">
-                    <button type="button">LOAD MORE</button>
+                <div class="d-flex justify-content-center ">
+                    <button class="btn btn-sm btn-warning warning-underline fw-bold text-black">
+                        <a href="{{ route('comics.create', $comic->$id) }}">Nuovo Fumetto</a>
+                    </button>
                 </div>
                 <div class="col-2 text-center bage">CURRENT SERIES</div>
             </div>
