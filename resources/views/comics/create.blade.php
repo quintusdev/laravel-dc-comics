@@ -6,7 +6,7 @@
             <div class="col-12">
                 <form action=" {{ route('comics.store') }} " method="POST">
                     @csrf
-                    <div class="form-group border p-4">
+                    <div class="form-group border p-4 my-3">
                         <div class="row">
                             <div class="col-12 my-3">
                                 <label class="control-label my-3">Titolo</label>
@@ -64,7 +64,7 @@
                                     class="form-control" required></textarea>
                             </div>
                             <div class="col-12 text-center my-5">
-                                <button type="submit" class="btn btn-primary">Aggiungi</button>
+                                <button type="submit" class="btn btn-success">Salva Fumetto</button>
                             </div>
                         </div>
                     </div>

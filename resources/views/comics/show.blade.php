@@ -4,20 +4,20 @@
     <div class="container-blu"></div>
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-12">
                 <div>
-                    <img src="{{ $comic->thumb }}" class="img-show">
+                    <img src="{{ $comic->thumb }}" class="img-show m-5">
                 </div>
                 <div class="row position my-5">
                     <div class="d-flex justify-content-center">
                         <div class="col-7 me-5">
-                            <h2>{{ $comic->title }}</h2>
-                            <div class="button-green d-flex justify-content-between align-items-center my-3">
-                                <p class="ps-3">Prezzo: {{ $comic->price }} €</p>
-                                <p class="bg-success">AVAILABLE</p>
-                                <p class="pe-3">Check Availability</p>
+                            <h2><strong>{{ $comic->title }}</strong></h2>
+                            <div class="button-green d-flex justify-content-between align-items-center my-5">
+                                <p class="ps-3">Prezzo: <strong>{{ $comic->price }} €</strong></p>
+                                <p class="pe-1">Check Availability -></p>
+                                <p class="bg-success text-white p-1"><strong>DISPONIBILE</strong></p>
                             </div>
-                            <p>{{ $comic->description }}</p>
+                            <p><strong><em>Descrizione:</em></strong> <br>{{ $comic->description }}</p>
                         </div>
                         <div class="col-2">
                             <img src="{{ Vite::asset('public/adv.jpg') }}" class="img-adv">
@@ -30,7 +30,7 @@
     <div class="container">
         <div class="row p-5 ext-primary-emphasis">
             <div class="col-6">
-                <h4>Talent</h4>
+                <h4>Creatori:</h4>
                 <div class="row pt-3">
                     <div class="col-4">
                         <span>Artista:</span>
@@ -49,10 +49,10 @@
                 </div>
             </div>
             <div class="col-6">
-                <h4>Specs</h4>
+                <h4>Specifiche:</h4>
                 <div class="row pt-3">
                     <div class="col-4">
-                        <span>Series:</span>
+                        <span>Serie:</span>
                     </div>
                     <div class="col-8 px-5 text-primary text-uppercase">
                         <span>{{ $comic->series }}</span>
@@ -63,7 +63,7 @@
                         <span>Prezzo:</span>
                     </div>
                     <div class="col-8 px-5 text-primary text-uppercase">
-                        <span>{{ $comic->price }}</span>
+                        <span>{{ $comic->price }} €</span>
                     </div>
                 </div>
                 <div class="row pt-3">
@@ -77,10 +77,10 @@
             </div>
             <div class="d-flex justify-content-center">
                 <button class="btn btn-sm btn-success fw-bold text-white mx-3">
-                    <a class="unstyled" href="{{ route('comics.index', $comic->id) }}">Torna alla Home</a>
+                    <a class="home" href="{{ route('comics.index', $comic->id) }}">Torna alla Home</a>
                 </button>
                 <button class="btn btn-sm btn-warning fw-bold text-white mx-3">
-                    <a href="{{ route('comics.edit', $comic->id) }}">Modifica</a>
+                    <a class="mod" href="{{ route('comics.edit', $comic->id) }}">Modifica</a>
                 </button>
                 {{-- Delete Button --}}
                 <form action="{{ route('comics.destroy', $comic) }}" method="POST"

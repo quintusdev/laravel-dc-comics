@@ -12,6 +12,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+/* STYLE HEADER */
 .bg-header {
     background-color: #0074E8;
 }
@@ -39,12 +40,17 @@ body {
     border-bottom: 5px solid #0074e8;
 }
 
+/* Fine STYLE HEADER */
+
+/* STYLE JUMBOTRON */
 .jumbotron {
     width: 100%;
     height: 400px;
     object-fit: cover;
     object-position: top;
 }
+
+/* FINE STYLE JUMBOTRON */
 
 .dimension {
     height: 250px;
@@ -84,9 +90,29 @@ button {
     height: 60px;
 }
 
+/* STYLE IMMAGINE DETTAGLIO FUMETTO */
+.img-show {
+    width: 600px;
+    height: 500px;
+}
+
 .pad-row {
     padding: 50px;
 }
+
+a {
+    text-decoration: none;
+}
+
+a.home {
+    color: #fff;
+}
+
+a.mod {
+    color: #000;
+}
+
+/* CSS FOOTER */
 
 .cont {
     background-image: url(../img/footer-bg.jpg);
